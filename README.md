@@ -1,4 +1,9 @@
 # simphony
 A mobile app that allows musicians to find musicians
 
-This app was created using [Flutter](flutter.io)
+## Environment setup
+
+* Install [Flutter](flutter.io)
+* Install [Visual Studio Code](https://code.visualstudio.com/)
+* Get the 'Flutter' extension in VS Code and reload VS Code
+* Press Start Debugging and choose Dart & Flutter
