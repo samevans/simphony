@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'landing.dart';
+import 'screens/login/landingPage.dart';
 
 class App extends StatelessWidget {
 
