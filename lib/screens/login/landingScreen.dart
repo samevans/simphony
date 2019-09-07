@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'text_section.dart';
 
 class LandingScreen extends StatelessWidget {
 
@@ -12,24 +13,9 @@ class LandingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.red,
-            ),
-            child: Text(''),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.green,
-            ),
-            child: Text(''),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(''),
-          )
+          TextSection(Colors.red),
+          TextSection(Colors.green),
+          TextSection(Colors.blue),
         ]
 		));
 	}
