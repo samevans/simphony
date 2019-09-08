@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
 import 'image_banner.dart';
 import 'text_section.dart';
+import '../../models/location.dart';
 
 class LandingScreen extends StatelessWidget {
 
 	@override
 	Widget build(BuildContext context) {
+
+    final locations = Location.fetchAll();
+    final location = locations.first;
+
 		return Scaffold(
 			appBar: AppBar(
-				title: Text('Hello'),
+				title: Text(location.name),
 			),
 			body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ImageBanner("assets/images/treble-clef-heart.png"),
-          TextSection("summary", "something1"),
-          TextSection("summary2", "something2"),
-          TextSection("summary3", "something2"),
-        ]
+          ImageBanner(location.imagePath),
+        ]..addAll(textSections(location))
 		  )
     );
 	}
+
+  List<Widget> textSections(Location location) {
+    return location.facts.map((fact) => TextSection(fact.title, fact.text)).toList();
+  }
 }
