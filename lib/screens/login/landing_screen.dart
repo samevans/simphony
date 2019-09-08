@@ -15,10 +15,11 @@ class LandingScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner("assets/images/treble-clef-heart.png"),
-          TextSection(Colors.red),
-          TextSection(Colors.green),
-          TextSection(Colors.blue),
+          TextSection("summary", "something1"),
+          TextSection("summary2", "something2"),
+          TextSection("summary3", "something2"),
         ]
-		));
+		  )
+    );
 	}
 }
