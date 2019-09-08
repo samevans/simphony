@@ -9,9 +9,9 @@ class Locations extends StatelessWidget {
     final locations = Location.fetchAll();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Locations'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Locations'),
+      // ),
       body: ListView(
         children: locations
           .map((location) => 

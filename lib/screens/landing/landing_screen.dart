@@ -5,14 +5,10 @@ import '../../models/location.dart';
 
 class LandingScreen extends StatelessWidget {
 
-  final int _locationId;
-
-  LandingScreen(this._locationId);
-
 	@override
 	Widget build(BuildContext context) {
 
-    final location = Location.fetchById(_locationId);
+    final location = Location.fetchAll().first;
 
 		return Scaffold(
 			appBar: AppBar(

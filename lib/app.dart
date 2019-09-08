@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'screens/landing/landing_screen.dart';
-import 'screens/signup/locations.dart';
+import 'screens/signup/signup_screen.dart';
+import 'screens/login/login_screen.dart';
 import 'style.dart';
 
 const HomeRoute = '/';
 const SignupRoute = '/signup';
+const LoginRoute = '/login';
 
 class App extends StatelessWidget {
 
@@ -22,10 +24,13 @@ class App extends StatelessWidget {
       Widget screen;
       switch (settings.name) {
         case HomeRoute:
-          screen = Locations();
+          screen = LandingScreen();
           break;
         case SignupRoute:
-          screen = LandingScreen(arguments['id']);
+          screen = SignupScreen();
+          break;
+        case LoginRoute:
+          screen = LoginScreen();
           break;
         default:
           return null;
