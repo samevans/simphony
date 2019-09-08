@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/landing/landing_screen.dart';
-import 'screens/signup/signup_screen.dart';
-import 'screens/login/login_screen.dart';
+import 'screens/auth/signup/signup_screen.dart';
+import 'screens/auth/login/login_screen.dart';
 import 'style.dart';
 
 const HomeRoute = '/';
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
 
   RouteFactory _routes() {
     return (settings) {
-      final Map<String, dynamic> arguments = settings.arguments;
+      // final Map<String, dynamic> arguments = settings.arguments;
       Widget screen;
       switch (settings.name) {
         case HomeRoute:
