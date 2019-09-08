@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'image_banner.dart';
 import 'text_section.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -10,9 +11,10 @@ class LandingScreen extends StatelessWidget {
 				title: Text('Hello'),
 			),
 			body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          ImageBanner("assets/images/treble-clef-heart.png"),
           TextSection(Colors.red),
           TextSection(Colors.green),
           TextSection(Colors.blue),

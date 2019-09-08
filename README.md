@@ -1,5 +1,5 @@
 # simphony
-A mobile app that allows musicians to find musicians
+A mobile app that allows musicians for musicians
 
 ## Environment setup
 
