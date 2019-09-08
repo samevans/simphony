@@ -3,6 +3,7 @@ import 'package:simphony/app.dart';
 import 'image_banner.dart';
 import 'text_section.dart';
 import '../../models/location.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LandingScreen extends StatelessWidget {
 
@@ -21,19 +22,43 @@ class LandingScreen extends StatelessWidget {
         children: [
           ImageBanner(location.imagePath),
           GestureDetector(
-            child: Text("Go to signup"),
-            onTap: () => _onLocationTap(context, SignupRoute),
-          ),
-          GestureDetector(
             child: Text("Go to login"),
-            onTap: () => _onLocationTap(context, LoginRoute),
+            onTap: () => _onNavigatePress(context, LoginRoute),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                SizedBox(
+                  width: 300.0,
+                  child: RaisedButton(
+                    onPressed: () => _onNavigatePress(context, SignupRoute),
+                    shape: StadiumBorder(),
+                    textColor: Colors.white,
+                    color: Color(0xFF625CFB),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          FontAwesomeIcons.facebook
+                        ),
+                        Text(
+                          'Continue with Facebook',
+                          style: TextStyle(fontSize: 18)
+                        ),
+                      ],
+                    )
+                  ),
+                )
+              ]
+            )
           ),
         ]..addAll(textSections(location))
 		  )
     );
 	}
 
-  _onLocationTap(BuildContext context, String route) {
+  _onNavigatePress(BuildContext context, String route) {
     Navigator.pushNamed(context, route);
   }
 

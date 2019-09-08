@@ -10,16 +10,12 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Signup'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          CustomPaint(
-            painter: SimphonyPainter(),
-          ),
-          Text('hi2')
-        ]
-      )
+      body: Container(
+        color: Colors.white,
+        child: CustomPaint(
+          painter: SimphonyPainter(),
+        ),
+      ),
     );
   }
 }
