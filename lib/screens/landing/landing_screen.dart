@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simphony/app.dart';
 import 'components/image_banner.dart';
+import 'components/signup_text.dart';
 import 'components/text_section.dart';
 import 'components/continue_with_facebook.dart';
 import '../../models/location.dart';
@@ -25,15 +26,16 @@ class LandingScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                GestureDetector(
-                  child: Text("Go to login"),
-                  onTap: () => _onNavigatePress(context, LoginRoute),
-                ),
+                // GestureDetector(
+                //   child: Text("Go to login"),
+                //   onTap: () => _onNavigatePress(context, LoginRoute),
+                // ),
+                SignupText(),
                 ContinueWithFacebook()
               ]
             )
           ),
-        ]..addAll(textSections(location))
+        ]//..addAll(textSections(location))
 		  )
     );
 	}

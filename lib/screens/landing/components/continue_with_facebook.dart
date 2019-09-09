@@ -17,12 +17,19 @@ class ContinueWithFacebook extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
-              FontAwesomeIcons.facebook
+              FontAwesomeIcons.facebookSquare
             ),
-            Text(
-              'Continue with Facebook',
-              style: TextStyle(fontSize: 18)
-            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10.0, 3.0, 0.0, 0.0),
+              child: Text(
+                'Continue with Facebook',
+                style: TextStyle(
+                  fontSize: 19, 
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'Helvetica',
+                ),
+              ),
+            )
           ],
         )
       ),

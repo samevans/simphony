@@ -1,4 +1,4 @@
-# simphony
+# Simphony
 A mobile app that allows musicians for musicians
 
 ## Environment setup
