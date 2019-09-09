@@ -15,7 +15,7 @@ class SignupText extends StatelessWidget {
         Container(
           padding: const EdgeInsets.fromLTRB(_horizontalPad, 10.0, _horizontalPad, _horizontalPad),
           child: Text(
-            "It's easier to sign up now", 
+            "It's easy to find nearby musicians", 
             style: Theme.of(context).textTheme.body1,
           ),
         ),

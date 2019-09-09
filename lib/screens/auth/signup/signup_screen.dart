@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../simphony_painter.dart';
+import '../curved_path.dart';
 
 class SignupScreen extends StatelessWidget {
 
@@ -7,15 +7,9 @@ class SignupScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Signup'),
-      ),
       body: Container(
-        color: Colors.white,
-        child: CustomPaint(
-          painter: SimphonyPainter(),
-        ),
-      ),
+        child: CurvedPath(),
+      )
     );
   }
 }
