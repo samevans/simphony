@@ -7,7 +7,8 @@ class ContinueWithFacebook extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return SizedBox(
-      width: 300.0,
+      width: 330.0,
+      height: 40.0,
       child: RaisedButton(
         onPressed: () => _onNavigatePress(context, SignupRoute),
         shape: StadiumBorder(),
