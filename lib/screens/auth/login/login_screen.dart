@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../curved_path.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -6,12 +7,13 @@ class LoginScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
-      body: Container(
-        child: Text('hi'),
-      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          CurvedPath("Welcome Back,", "Log In!"),
+        ]
+      )
     );
   }
 }

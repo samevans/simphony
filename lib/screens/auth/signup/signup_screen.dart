@@ -7,8 +7,12 @@ class SignupScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Container(
-        child: CurvedPath(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          CurvedPath("Hello,", "Sign Up!"),
+        ]
       )
     );
   }
