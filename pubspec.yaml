@@ -66,6 +66,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Helvetica.ttf
           weight: 300
+    - family: Pacifico
+      fonts:
+        - asset: assets/fonts/Pacifico.ttf
+          weight: 300
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

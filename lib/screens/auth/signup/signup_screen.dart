@@ -11,7 +11,7 @@ class SignupScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          CurvedPath("Hello,", "Sign Up!"),
+          // CurvedPath("Hello,", "Sign Up!"),
         ]
       )
     );

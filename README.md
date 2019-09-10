@@ -1,6 +1,6 @@
 # Simphony
-A mobile app that allows musicians for musicians
-
+A mobile app to find nearby musicians
+![GitHub Logo](/ukulele/images/smallukulele.png)
 ## Environment setup
 
 * Install [Flutter](flutter.io)

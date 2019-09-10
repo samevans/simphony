@@ -13,6 +13,13 @@ const AppBarTextStyle = TextStyle(
   color: Colors.white,
 );
 
+const AppLogoTextStyle = TextStyle(
+  fontFamily: 'Pacifico',
+  fontWeight: FontWeight.w300,
+  fontSize: 30.0,
+  color: Colors.black
+);
+
 const TitleTextStyle = TextStyle(
   fontFamily: FontNameDefault,
   fontWeight: FontWeight.w600,

@@ -12,7 +12,7 @@ class Location {
 
   static List<Location> fetchAll() {
     return [
-      Location(1, 'Sams Title', 'assets/images/treble-clef-heart.png', [
+      Location(1, 'Sams Title', 'assets/images/smallukulele.png', [
         LocationFact('Summary', 'Something1'),
         LocationFact('Sams Summary', 'Yoooo')
       ]),

@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          CurvedPath("Welcome Back,", "Log In!"),
+          // CurvedPath("Welcome Back,", "Log In!"),
         ]
       )
     );
