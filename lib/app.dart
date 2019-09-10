@@ -43,11 +43,12 @@ class App extends StatelessWidget {
     return ThemeData(
       appBarTheme: AppBarTheme(
         textTheme: TextTheme(title: AppBarTextStyle),
+        color: Color(0xFFE99E30)
       ),
       textTheme: TextTheme(
         title: TitleTextStyle,
         body1: Body1TextStyle
-      )
+      ),
     );
   }
 }

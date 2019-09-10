@@ -12,13 +12,13 @@ class SignupText extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(_horizontalPad, 32.0, _horizontalPad, 4.0),
           child: Text("Sign Up", style: Theme.of(context).textTheme.title,),
         ),
-        Container(
-          padding: const EdgeInsets.fromLTRB(_horizontalPad, 10.0, _horizontalPad, _horizontalPad),
-          child: Text(
-            "It's easy to find nearby musicians", 
-            style: Theme.of(context).textTheme.body1,
-          ),
-        ),
+        // Container(
+        //   padding: const EdgeInsets.fromLTRB(_horizontalPad, 10.0, _horizontalPad, _horizontalPad),
+        //   child: Text(
+        //     "It's easy to find nearby musicians", 
+        //     style: Theme.of(context).textTheme.body1,
+        //   ),
+        // ),
       ]
     );
   }
