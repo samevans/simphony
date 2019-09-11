@@ -8,7 +8,7 @@ class SignupWithFacebook extends StatelessWidget {
   Widget build(BuildContext context){
     return SizedBox(
       width: 330.0,
-      height: 40.0,
+      height: 50.0,
       child: RaisedButton(
         onPressed: () => _onNavigatePress(context, SignupRoute),
         shape: StadiumBorder(),
@@ -26,7 +26,7 @@ class SignupWithFacebook extends StatelessWidget {
                 'Sign up with Facebook',
                 style: TextStyle(
                   fontSize: 19, 
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w500,
                   fontFamily: 'Helvetica',
                   color: Colors.white
                 ),

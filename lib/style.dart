@@ -8,9 +8,10 @@ const String FontNameDefault = 'Helvetica';
 
 const AppBarTextStyle = TextStyle(
   fontFamily: FontNameDefault,
-  fontWeight: FontWeight.w300,
+  fontWeight: FontWeight.w600,
   fontSize: MediumTextSize,
   color: Colors.white,
+  letterSpacing: 1.7
 );
 
 const TitleTextStyle = TextStyle(
