@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const LargeTextSize = 30.0;
+const LargeTextSize = 3.0;
 const MediumTextSize = 20.0;
 const BodyTextSize = 16.0;
 
@@ -24,5 +24,5 @@ const Body1TextStyle = TextStyle(
   fontFamily: FontNameDefault,
   fontWeight: FontWeight.w300,
   fontSize: BodyTextSize,
-  color: Color(0xFF666666),
+  color: Colors.black,
 );

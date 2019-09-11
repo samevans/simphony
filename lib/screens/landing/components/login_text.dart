@@ -26,7 +26,7 @@ class LoginText extends StatelessWidget {
             child: InkWell(
               onTap: () => _onNavigatePress(context, LoginRoute),
               child: Text(
-                "Login",
+                "Sign In",
                 style: TextStyle(
                   fontSize: 16, 
                   decoration: TextDecoration.underline,

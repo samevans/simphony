@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'components/landing_logo.dart';
 import 'components/login_text.dart';
-import 'components/signup_text.dart';
-import 'components/continue_with_email.dart';
-import 'components/continue_with_facebook.dart';
+import 'components/signup_with_email.dart';
+import 'components/signup_with_facebook.dart';
 
 class LandingScreen extends StatelessWidget {
 
@@ -12,10 +11,10 @@ class LandingScreen extends StatelessWidget {
 
 		return Scaffold(
       appBar: AppBar(
-				title: Text("Welcome"),
+				title: Text("Welcome!"),
 			),
 			body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Center(
@@ -25,11 +24,10 @@ class LandingScreen extends StatelessWidget {
                 Padding(padding: EdgeInsets.only(top: 25.0)),
                 LandingLogo(),
                 Padding(padding: EdgeInsets.only(top: 45.0)),
-                SignupText(),
                 Padding(padding: EdgeInsets.only(top: 15.0)),
-                ContinueWithFacebook(),
+                SignupWithFacebook(),
                 Padding(padding: EdgeInsets.only(top: 15.0)),
-                ContinueWithEmail(),
+                SignupWithEmail(),
                 Padding(padding: EdgeInsets.only(top: 30.0)),
                 LoginText(),
               ]

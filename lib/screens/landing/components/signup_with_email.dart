@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simphony/app.dart';
 
-class ContinueWithEmail extends StatelessWidget {
+class SignupWithEmail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
@@ -11,9 +11,10 @@ class ContinueWithEmail extends StatelessWidget {
       child: OutlineButton(
         onPressed: () => _onNavigatePress(context, SignupRoute),
         child: Text(
-          "I'll use email or phone",
+          "Sign up with Email",
           style: TextStyle(
-            fontSize: 16, 
+            fontSize: 18, 
+            fontFamily: 'Helvetica'
           ),
         ),
         shape: new RoundedRectangleBorder(

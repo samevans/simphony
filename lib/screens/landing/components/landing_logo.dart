@@ -12,7 +12,7 @@ class LandingLogo extends StatelessWidget {
           Positioned(
             top: 30.0,
             child: Image.asset(
-              'assets/images/smallukulele.png',
+              'assets/images/ukulele-logo.png',
             ),
           ),
           Positioned(
@@ -33,7 +33,8 @@ class LandingLogo extends StatelessWidget {
               "Find musicians nearby",
               style: TextStyle(
                 fontFamily: 'Helvetica',
-                fontSize: 16.0
+                fontSize: 16.0,
+                color: Color(0xFF666666)
               ),
             ),
           )

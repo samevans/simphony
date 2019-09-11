@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simphony/app.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ContinueWithFacebook extends StatelessWidget {
+class SignupWithFacebook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
@@ -23,11 +23,12 @@ class ContinueWithFacebook extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(10.0, 3.0, 0.0, 0.0),
               child: Text(
-                'Continue with Facebook',
+                'Sign up with Facebook',
                 style: TextStyle(
                   fontSize: 19, 
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   fontFamily: 'Helvetica',
+                  color: Colors.white
                 ),
               ),
             )
