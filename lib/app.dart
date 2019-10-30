@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'screens/landing/landing_screen.dart';
 import 'screens/auth/signup/signup_screen.dart';
 import 'screens/auth/login/login_screen.dart';
+import 'screens/home/dashboard_screen.dart';
 import 'style.dart';
 
 const HomeRoute = '/';
 const SignupRoute = '/signup';
 const LoginRoute = '/login';
+const DashboardRoute = '/dashboard';
 
 class App extends StatelessWidget {
 
@@ -31,6 +33,9 @@ class App extends StatelessWidget {
           break;
         case LoginRoute:
           screen = LoginScreen();
+          break;
+        case DashboardRoute:
+          screen = DashboardScreen();
           break;
         default:
           return null;

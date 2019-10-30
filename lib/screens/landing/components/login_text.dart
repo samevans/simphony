@@ -24,7 +24,8 @@ class LoginText extends StatelessWidget {
           Container(
             padding: EdgeInsets.fromLTRB(4.0, 0.0, 0.0, 0.0),
             child: InkWell(
-              onTap: () => _onNavigatePress(context, LoginRoute),
+              //onTap: () => _onNavigatePress(context, LoginRoute),
+              onTap: () => _onNavigatePress(context, DashboardRoute),
               child: Text(
                 "Sign In",
                 style: TextStyle(
