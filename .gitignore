@@ -104,3 +104,4 @@ android/local.properties
 /ios/Runner/GeneratedPluginRegistrant.m
 /pubspec.lock
 /ios/Flutter/Generated.xcconfig
+/android/gradle.properties
