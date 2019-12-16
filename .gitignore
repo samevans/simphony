@@ -105,3 +105,4 @@ android/local.properties
 /pubspec.lock
 /ios/Flutter/Generated.xcconfig
 /android/gradle.properties
+/.flutter-plugins-dependencies

@@ -1,0 +1,6 @@
+Add permissions to iOS Info.plist for geolocation:
+
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Needed to access location</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Needed to access location</string>
