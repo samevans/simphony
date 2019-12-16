@@ -28,7 +28,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Text("Location: " + userLocation.latitude.toString() + ", " + userLocation.longitude.toString()),
-                Text(userAddress)
+                Text(userAddress != null ? userAddress : '')
               ],
             ),
 
@@ -66,17 +66,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
   _getAddressFromLatLng() async {
-    try {
-      List<Placemark> p = await geolocator.placemarkFromCoordinates(
-          userLocation.latitude, userLocation.longitude);
+    if(userLocation != null) {
+      try {
+        List<Placemark> p = await geolocator.placemarkFromCoordinates(
+            userLocation.latitude, userLocation.longitude);
 
-      Placemark place = p[0];
+        Placemark place = p[0];
 
-      setState(() {
-        userAddress = "${place.locality}, ${place.postalCode}, ${place.country}";
-      });
-    } catch (e) {
-      print(e);
+        setState(() {
+          userAddress = "${place.locality}, ${place.postalCode}, ${place.country}";
+        });
+      } catch (e) {
+        print(e);
+      }
     }
+    
   }
 }
