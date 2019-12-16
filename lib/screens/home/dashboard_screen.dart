@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:location/location.dart';
+import 'package:geolocator/geolocator.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -8,9 +8,9 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
 
-  var location = new Location();
-
-  Map<String, double> userLocation;
+  final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
+  Position userLocation;
+  String userAddress;
 
   @override
 	Widget build(BuildContext context) {
@@ -22,19 +22,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            userLocation == null ?
+            (userLocation == null && userAddress == null)?
             CircularProgressIndicator() :
-            Text("Location: " + userLocation["latitude"].toString() + " " + userLocation["longitude"].toString()),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text("Location: " + userLocation.latitude.toString() + ", " + userLocation.longitude.toString()),
+                Text(userAddress)
+              ],
+            ),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
-                  getLocation().then((value) {
-                    setState(() {
-                      userLocation = value;
-                    });
-                  });
+                  _getLocation();
                 },
                 color: Colors.blue,
                 child: Text(
@@ -49,19 +51,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  Future<Map<String, double>> getLocation() async {
-    var currentLocation = <String, double>{};
+  _getLocation() async {
+    
+    geolocator
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+        .then((Position position) {
+      setState(() {
+        userLocation = position;
+      });
+      _getAddressFromLatLng();
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  _getAddressFromLatLng() async {
     try {
-      currentLocation = await location.getLocation();
+      List<Placemark> p = await geolocator.placemarkFromCoordinates(
+          userLocation.latitude, userLocation.longitude);
+
+      Placemark place = p[0];
+
+      setState(() {
+        userAddress = "${place.locality}, ${place.postalCode}, ${place.country}";
+      });
     } catch (e) {
-      currentLocation = null;
+      print(e);
     }
-    return currentLocation;
-    // currentLocation["latitude"];
-    // currentLocation["longitude"];
-    // currentLocation["accuracy"];
-    // currentLocation["altitude"];
-    // currentLocation["speed"];
-    // currentLocation["speed_accuracy"]; //Not for iOS
   }
 }
